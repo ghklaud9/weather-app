@@ -1,0 +1,59 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+h4 {
+  margin-top: 30px;
+  padding: 10px;
+}
+hr {
+  text-align: center;
+  border-style: solid;
+  padding: 2px;
+  margin-bottom: 40px;
+}
+ul {
+  list-style: none;
+}
+.imageTop {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+.col-7 {
+  margin-top: 15px;
+  padding: 20px;
+}
+.imageBottom {
+  width: 65px;
+}
+.col-2 {
+  text-align: center;
+}
+.card {
+  width: 50%;
+}
+.day {
+  font-size: 14px;
+  font-weight: bold;
+}
+.temp {
+  font-size: 15px;
+}
+.frontDetails {
+  padding: 0;
+  margin-top: 30px;
+}
+#cityMain {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+#description {
+  margin-top: 6px;
+  margin-bottom: 7px;
+}
+#temp {
+  font-size: 30px;
+}
+#dateMain {
+  font-size: 22px;
+}
