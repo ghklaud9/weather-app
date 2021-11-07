@@ -75,3 +75,6 @@ ul {
   margin-top: 0;
   margin-left: 20px;
 }
+#city-input {
+  box-shadow: 3px 1px 1px #e6ddc4;
+}
