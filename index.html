@@ -21,74 +21,76 @@
   </head>
   <body>
     <div class="containter">
-      <div class="card">
-        <div class="card-body">
-          <form>
-            <input type="text" placeholder="City..." id="city-input" />
-            <input type="submit" value="Search" />
-            <input
-              type="submit"
-              value="Use current location"
-              id="current-location"
-            />
-          </form>
-          <ul class="frontDetails">
-            <li id="cityMain"></li>
-            <li id="dateMain"></li>
-            <li id="description"></li>
-          </ul>
+      <div class="app">
+        <form>
+          <input type="text" placeholder="City..." id="city-input" />
+          <input type="submit" value="Search" class="btn btn-primary" />
+          <input
+            type="submit"
+            value="Use current location"
+            id="current-location"
+            class="btn btn-secondary"
+          />
+        </form>
+        <ul class="frontDetails">
+          <li id="cityMain"></li>
+          <li id="dateMain"></li>
+          <li id="description"></li>
+        </ul>
 
-          <h5></h5>
+        <h5></h5>
 
-          <div class="row">
-            <div class="col-5">
-              <img src="images/cloudy.jpg" class="imageTop" />
-            </div>
-            <div class="col-7">
-              <ul class="sideDetails">
-                <li id="temp"></li>
-                <li id="feel"></li>
-                <li id="humidity"></li>
-                <li id="wind"></li>
-              </ul>
-            </div>
-            <hr />
+        <div class="row">
+          <div class="col-5">
+            <img src="images/cloudy.jpg" class="imageTop" />
           </div>
-          <div class="row">
-            <div class="col-2">
-              <img src="images/stormycloud.jpg" class="imageBottom" />
-              <div class="day">Monday</div>
-              <div class="temp">12°C</div>
-            </div>
-            <div class="col-2">
-              <img src="images/sunnycloud.jpg" class="imageBottom" />
-              <div class="day">Tuesday</div>
-              <div class="temp">14°C</div>
-            </div>
-            <div class="col-2">
-              <img src="images/sunnycloud.jpg" class="imageBottom" />
-              <div class="day">Wednesday</div>
-              <div class="temp">15°C</div>
-            </div>
-            <div class="col-2">
-              <img src="images/thunderstorm.jpg" class="imageBottom" />
-              <div class="day">Thursday</div>
-              <div class="temp">14°C</div>
-            </div>
-            <div class="col-2">
-              <img src="images/cloudy.jpg" class="imageBottom" />
-              <div class="day">Friday</div>
-              <div class="temp">13°C</div>
-            </div>
-            <div class="col-2">
-              <img src="images/sunnycloud.jpg" class="imageBottom" />
-              <div class="day">Saturday</div>
-              <div class="temp">16°C</div>
-            </div>
+          <div class="col-7">
+            <ul class="sideDetails">
+              <li id="temp">Temperature</li>
+              <li id="feel">Feels like</li>
+              <li id="humidity">Humidity</li>
+              <li id="wind">Wind</li>
+            </ul>
+          </div>
+          <hr />
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="images/stormycloud.jpg" class="imageBottom" />
+            <div class="day">Monday</div>
+            <div class="temp">12°C</div>
+          </div>
+          <div class="col-2">
+            <img src="images/sunnycloud.jpg" class="imageBottom" />
+            <div class="day">Tuesday</div>
+            <div class="temp">14°C</div>
+          </div>
+          <div class="col-2">
+            <img src="images/sunnycloud.jpg" class="imageBottom" />
+            <div class="day">Wednesday</div>
+            <div class="temp">15°C</div>
+          </div>
+          <div class="col-2">
+            <img src="images/thunderstorm.jpg" class="imageBottom" />
+            <div class="day">Thursday</div>
+            <div class="temp">14°C</div>
+          </div>
+          <div class="col-2">
+            <img src="images/cloudy.jpg" class="imageBottom" />
+            <div class="day">Friday</div>
+            <div class="temp">13°C</div>
+          </div>
+          <div class="col-2">
+            <img src="images/sunnycloud.jpg" class="imageBottom" />
+            <div class="day">Saturday</div>
+            <div class="temp">16°C</div>
           </div>
         </div>
       </div>
     </div>
+    <span class="codeLink"
+      ><a href="" class="link">Open source code</a> by Klaudia Sobczyk</span
+    >
     <script src="src/app.js"></script>
   </body>
 </html>
