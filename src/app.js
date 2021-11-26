@@ -67,10 +67,16 @@ function showDetails(response) {
   let description = response.data.weather[0].description;
   let descriptionInput = document.querySelector("#description");
   descriptionInput.innerHTML = `${description}`;
+  let mainImage = document.querySelector("#mainImage");
+  mainImage.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 
   celsiusTemperature = response.data.main.temp;
   celsiusTemperatureFeel = response.data.main.feels_like;
 }
+
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;

@@ -15,6 +15,13 @@ hr {
 ul {
   list-style: none;
 }
+li:first-letter {
+  text-transform: capitalize;
+}
+form #city-input {
+  display: inline;
+  width: 45%;
+}
 
 .imageTop {
   width: 80%;
@@ -22,8 +29,8 @@ ul {
   margin: 0 auto;
 }
 .col-7 {
-  margin-top: 15px;
-  padding: 20px;
+  margin-top: 0;
+  padding: 10px;
 }
 .imageBottom {
   width: 65px;
@@ -43,7 +50,7 @@ ul {
 }
 .frontDetails {
   padding: 0;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 #cityMain {
   font-size: 30px;
@@ -66,7 +73,7 @@ ul {
   border-radius: 10px;
   padding: 15px;
   margin: 20px;
-  width: 50%;
+  width: 40%;
 }
 .link {
   text-decoration: none;
@@ -81,4 +88,7 @@ ul {
 }
 .buttons {
   margin-left: 32px;
+}
+#mainImage {
+  background-color: #fff;
 }
