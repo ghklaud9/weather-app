@@ -67,6 +67,9 @@ function showDetails(response) {
   let description = response.data.weather[0].description;
   let descriptionInput = document.querySelector("#description");
   descriptionInput.innerHTML = `${description}`;
+
+  celsiusTemperature = response.data.main.temp;
+  celsiusTemperatureFeel = response.data.main.feels_like;
 }
 function showPosition(position) {
   let latitude = position.coords.latitude;
@@ -80,3 +83,29 @@ function getCurrentPosition() {
 }
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentPosition);
+
+let celsiusTemperature = null;
+let celsiusTemperatureFeel = null;
+
+function showFarhenheitTemp(event) {
+  event.preventDefault();
+  let farhenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  let temp = document.querySelector("#temp");
+  temp.innerHTML = `${Math.round(farhenheitTemp)}°F`;
+  let farhenheitTempFeel = (celsiusTemperatureFeel * 9) / 5 + 32;
+  let feel = document.querySelector("#feel");
+  feel.innerHTML = `Feels like: ${Math.round(farhenheitTempFeel)}°F`;
+}
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#temp");
+  temp.innerHTML = `${Math.round(celsiusTemperature)}°C`;
+  let feel = document.querySelector("#feel");
+  feel.innerHTML = `Feels like: ${Math.round(celsiusTemperatureFeel)}°C`;
+}
+let farhenheit = document.querySelector("#farhenheit");
+farhenheit.addEventListener("click", showFarhenheitTemp);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showCelsiusTemperature);

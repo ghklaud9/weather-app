@@ -15,6 +15,7 @@ hr {
 ul {
   list-style: none;
 }
+
 .imageTop {
   width: 80%;
   display: block;
@@ -77,4 +78,7 @@ ul {
 }
 #city-input {
   box-shadow: 3px 1px 1px #e6ddc4;
+}
+.buttons {
+  margin-left: 32px;
 }
