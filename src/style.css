@@ -1,6 +1,6 @@
 body {
-  font-family: "Montserrat", sans-serif;
-  color: #687980;
+  font-family: 'Montserrat', sans-serif;
+  color: #f3f0d7;
 }
 h4 {
   margin-top: 30px;
@@ -24,7 +24,7 @@ form #city-input {
 }
 
 .imageTop {
-  width: 80%;
+  width: 220px;
   display: block;
   margin: 0 auto;
 }
@@ -38,8 +38,6 @@ form #city-input {
 .col-2 {
   text-align: center;
 }
-.card {
-  width: 50%;
 }
 .day {
   font-size: 14px;
@@ -68,7 +66,11 @@ form #city-input {
 }
 .app {
   border: solid 2px;
-  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  background: linear-gradient(
+    114.3deg,
+    rgb(19, 126, 57) 0.2%,
+    rgb(8, 65, 91) 68.5%
+  );
   border-color: #687980;
   border-radius: 10px;
   padding: 15px;
@@ -90,7 +92,5 @@ form #city-input {
 }
 .buttons {
   margin-left: 32px;
-}
-#mainImage {
-  background-color: #fff;
+  margin-bottom: 15px;
 }
