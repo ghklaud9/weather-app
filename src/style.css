@@ -10,7 +10,7 @@ hr {
   text-align: center;
   border-style: solid;
   padding: 2px;
-  margin-bottom: 40px;
+  margin-bottom: 30px 10px;;
 }
 ul {
   list-style: none;
@@ -18,13 +18,23 @@ ul {
 li:first-letter {
   text-transform: capitalize;
 }
-form #city-input {
+#city-input {
   display: inline;
-  width: 45%;
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: none;
+  font-size: 14px;
 }
-
+#current-location {
+  font-size: 14px;
+  border-radius: 10px;
+}
+#search {
+  font-size: 14px;
+  border-radius: 10px;
+}
 .imageTop {
-  width: 220px;
+  width: 192px;
   display: block;
   margin: 0 auto;
 }
@@ -66,18 +76,14 @@ form #city-input {
 }
 .app {
   border: solid 2px;
-  background: linear-gradient(
-    114.3deg,
-    rgb(19, 126, 57) 0.2%,
-    rgb(8, 65, 91) 68.5%
-  );
+  background: linear-gradient(0deg, rgb(17, 138, 114) 0%, rgb(5, 39, 71) 100%);
   border-color: #687980;
   border-radius: 10px;
   padding: 15px;
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 0;
-  width: 40%;
+  width: 35%;
 }
 .link {
   text-decoration: none;
@@ -87,10 +93,11 @@ form #city-input {
   margin-top: 0;
   margin-left: 20px;
 }
-#city-input {
-  box-shadow: 3px 1px 1px #e6ddc4;
-}
+
 .buttons {
   margin-left: 32px;
   margin-bottom: 15px;
+}
+.name {
+  color: #3e4a61;
 }
