@@ -51,6 +51,24 @@ function getCity(event) {
 let city = document.querySelector("form");
 city.addEventListener("submit", getCity);
 
+function showForecast() {
+  let forecast = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Sunday", "Monday", "Tuesday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <img src="images/stormycloud.jpg" class="imageBottom" />
+              <div class="day">${day}</div>
+              <div class="temp">12°C</div>
+              </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 function showDetails(response) {
   let temp = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#temp");
@@ -76,6 +94,8 @@ function showDetails(response) {
   celsiusTemperature = response.data.main.temp;
   celsiusTemperatureFeel = response.data.main.feels_like;
 }
+
+showForecast();
 
 function showPosition(position) {
   let latitude = position.coords.latitude;
