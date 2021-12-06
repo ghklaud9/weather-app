@@ -39,16 +39,7 @@ dateMain.innerHTML = `${day} ${date} ${month} ${hours}:${minutes}`;
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = [
-    `Sunday`,
-    `Monday`,
-    `Tuesday`,
-    `Wednesday`,
-    `Thursday`,
-    `Friday`,
-    `Saturday`,
-    `Sunday`,
-  ];
+  let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`, `Sun`];
   return days[day];
 }
 function showForecast(response) {
@@ -60,11 +51,13 @@ function showForecast(response) {
       forecastHTML =
         forecastHTML +
         `<div class="col-2">
-              <img src="http://openweathermap.org/img/wn/${
+              <img id="image-bottom" src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
               }@2x.png"/>
-              <div class="day">${formatDay(forecastDay.dt)}</div>
-              <div class="temp">${Math.round(forecastDay.temp.day)}°C</div>
+              <div id="day">${formatDay(forecastDay.dt)}</div>
+              <div id="temp-forecast">${Math.round(
+                forecastDay.temp.day
+              )}°C</div>
               </div>`;
     }
   });
@@ -132,29 +125,3 @@ function getCurrentPosition() {
 }
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentPosition);
-
-let celsiusTemperature = null;
-let celsiusTemperatureFeel = null;
-
-function showFarhenheitTemp(event) {
-  event.preventDefault();
-  let farhenheitTemp = (celsiusTemperature * 9) / 5 + 32;
-  let temp = document.querySelector("#temp");
-  temp.innerHTML = `${Math.round(farhenheitTemp)}°F`;
-  let farhenheitTempFeel = (celsiusTemperatureFeel * 9) / 5 + 32;
-  let feel = document.querySelector("#feel");
-  feel.innerHTML = `Feels like: ${Math.round(farhenheitTempFeel)}°F`;
-}
-
-function showCelsiusTemperature(event) {
-  event.preventDefault();
-  let temp = document.querySelector("#temp");
-  temp.innerHTML = `${Math.round(celsiusTemperature)}°C`;
-  let feel = document.querySelector("#feel");
-  feel.innerHTML = `Feels like: ${Math.round(celsiusTemperatureFeel)}°C`;
-}
-let farhenheit = document.querySelector("#farhenheit");
-farhenheit.addEventListener("click", showFarhenheitTemp);
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", showCelsiusTemperature);

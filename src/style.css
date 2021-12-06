@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #f3f0d7;
 }
 h4 {
@@ -10,10 +10,11 @@ hr {
   text-align: center;
   border-style: solid;
   padding: 2px;
-  margin-bottom: 30px 10px;;
+  margin: 0 10px;
 }
 ul {
   list-style: none;
+  margin-bottom: 5px;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -37,27 +38,33 @@ form {
   border-radius: 10px;
 }
 .imageTop {
-  width: 192px;
+  width: 186px;
   display: block;
   margin: 0 auto;
 }
 .col-7 {
-  margin-top: 0;
+  margin-top: 15px;
   padding: 10px;
 }
-.imageBottom {
+#image-bottom {
   width: 65px;
 }
 .col-2 {
   text-align: center;
+  padding-right: calc(var(--bs-gutter-x) * 0.2);
+  padding-left: calc(var(--bs-gutter-x) * 0.2);
 }
+.col-2:hover {
+  background-color: #1e7973;
 }
-.day {
-  font-size: 14px;
+#day {
+  font-size: 15px;
   font-weight: bold;
 }
-.temp {
+#temp-forecast {
   font-size: 15px;
+  margin-top: 3px;
+  margin-bottom: 5px;
 }
 .frontDetails {
   padding: 0;
@@ -80,14 +87,14 @@ form {
 }
 .app {
   border: solid 2px;
-  background: linear-gradient(0deg, rgb(17, 138, 114) 0%, rgb(5, 39, 71) 100%);
+  background: linear-gradient(0deg, rgb(30, 153, 126) 0%, rgb(17, 45, 78) 97%);
   border-color: #687980;
   border-radius: 10px;
   padding: 15px;
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 0;
-  width: 35%;
+  width: 34%;
 }
 .link {
   text-decoration: none;
@@ -96,12 +103,7 @@ form {
   font-size: 12px;
   margin-top: 0;
   margin-left: 20px;
-  font-weight:bold;
-}
-
-.buttons {
-  margin-left: 32px;
-  margin-bottom: 15px;
+  font-weight: bold;
 }
 .name {
   color: #3e4a61;
