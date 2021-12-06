@@ -18,6 +18,9 @@ ul {
 li:first-letter {
   text-transform: capitalize;
 }
+form {
+  margin-top: 15px;
+}
 #city-input {
   display: inline;
   width: 40%;
@@ -58,21 +61,22 @@ li:first-letter {
 }
 .frontDetails {
   padding: 0;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 #cityMain {
   font-size: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 #description {
-  margin-top: 6px;
+  margin-top: 3px;
   margin-bottom: 7px;
+  font-size: 15px;
 }
 #temp {
   font-size: 30px;
 }
 #dateMain {
-  font-size: 22px;
+  font-size: 18px;
 }
 .app {
   border: solid 2px;
@@ -89,9 +93,10 @@ li:first-letter {
   text-decoration: none;
 }
 .codeLink {
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 0;
   margin-left: 20px;
+  font-weight:bold;
 }
 
 .buttons {
