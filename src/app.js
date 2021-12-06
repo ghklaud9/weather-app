@@ -101,6 +101,8 @@ function showDetails(response) {
   let description = response.data.weather[0].description;
   let descriptionInput = document.querySelector("#description");
   descriptionInput.innerHTML = `${description}`;
+  let cityName = document.querySelector("#cityMain");
+  cityName.innerHTML = response.data.name;
   let mainImage = document.querySelector("#mainImage");
   mainImage.setAttribute(
     "src",
@@ -116,6 +118,7 @@ function showDetails(response) {
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
+
   let apiKey = "ed839774472bd8c401ae9d1d267d1cfa";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showDetails);
